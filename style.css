@@ -1,0 +1,163 @@
+/* //// ÁLTALÁNOS FORMÁZÁS \\\\ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+
+/* //// HEADER \\\\ */
+.logo {
+    position: absolute;
+    padding-left: 5%;
+    padding-top: 1%;
+}
+ .logo img {
+    width: 200px;
+  }
+
+/* //// FŐ TARTALOM \\\\ */
+.container {
+    display: flex;
+    height: 90vh;   
+}
+ .left_side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #6200EA;
+  }
+ .right_side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url(images/bailey-zindel-396398-unsplash.jpg);
+    background-color: gray;
+    background-blend-mode: luminosity;
+    background-size: cover; 
+  }
+
+.text, .icon {
+    display: inline-block;
+    color: white;
+    font-size: 1.875rem;
+    padding: 2rem 0.5rem;
+}
+.icon {
+    background-color: white;
+    border-radius: 100%;
+    padding: 0.75rem;
+}
+.fw {
+    color: #6200EA;
+}
+.text {
+    font-weight: 700;
+}
+
+.small_container {
+    background-color: #ffffff;
+    width: 30vw;
+    height: fit-content;
+    border-radius: 5%;
+}
+.form_header {
+    color: #211138;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 3.5rem 3rem 1rem 3rem;
+}
+.form-group {
+    text-align: center;
+}
+
+input {
+    background-color: #F4F3F5;
+    opacity: 1;
+    border: none;
+    padding: 3%;
+    margin: 0.5rem 2rem;
+    width: 25vw;
+    resize:none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #211138;
+    font-size: 0.875rem;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.25;  
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #211138;
+    font-size: 0.875rem;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.25;
+}
+
+.forget_password {
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: 2.4px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin: 0.5rem 2rem 2rem 0.5rem;
+}
+.forget_password a {
+    text-decoration: none;
+    color: #6200EA;
+}
+.form-group_btn {
+    text-align: center;
+}
+
+.btn {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 2.4px;
+    border-radius: 1.5rem;
+    border: 2px solid #6200EA;
+}
+.btn_signup{
+    background-color: #6200EA;
+    padding: 0.75rem 8rem;
+    margin: 0.5rem 1rem;
+}
+.btn_login{
+    background-color: #ffffff;
+    color: #6200EA;
+    padding: 0.75rem 8.5rem;
+    margin: 0.5rem 1rem;
+    margin-bottom: 3rem;
+}
+
+/* //// FOOTER \\\\ */
+footer {
+    background-color: #211138;
+    color: #B2ACBA;
+    height: 10vh;
+    display: flex; 
+    align-items: center; 
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+footer div {
+    margin: 0 auto;
+    text-align: center;   
+ }
+ .text_colored {
+    color: #6200EA;
+ }
