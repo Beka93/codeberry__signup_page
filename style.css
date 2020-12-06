@@ -1,41 +1,59 @@
-/* //// ÁLTALÁNOS FORMÁZÁS \\\\ */
+﻿/* //// ÁLTALÁNOS FORMÁZÁS \\\\ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
+    /* //// HEADER \\\\ */
 
-
-/* //// HEADER \\\\ */
-.logo {
-    position: absolute;
+header {
+    background: #6200EA;
     padding-left: 5%;
     padding-top: 1%;
 }
- .logo img {
-    width: 200px;
+
+    /* //// FŐ TARTALOM \\\\ */
+.left_side {
+    background: #6200EA;
+    text-align: center;
+}
+
+.text,
+.icon {
+    color: white;
+    font-size: 1.875rem;
+    padding: 2rem 0.5rem;
+}
+.icon {
+    display: inline-block;
+    background-color: white;
+    border-radius: 100%;
+    padding: 0.75rem;
+}
+
+.fw {
+    color: #6200EA;
+}
+.text {
+    font-weight: 700;
+}
+
+.icon_text::after {
+    display: block;
+    content: "";
+    background-color: white;
+    height: .18rem;
+    width: 10rem;
+    margin: 1.5rem auto;
   }
 
-/* //// FŐ TARTALOM \\\\ */
-.container {
-    display: flex;
-    height: 90vh;   
-}
- .left_side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background: #6200EA;
-  }
- .right_side {
+.right_side {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,39 +62,22 @@ html, body {
     background-image: url(images/bailey-zindel-396398-unsplash.jpg);
     background-color: gray;
     background-blend-mode: luminosity;
-    background-size: cover; 
-  }
-
-.text, .icon {
-    display: inline-block;
-    color: white;
-    font-size: 1.875rem;
-    padding: 2rem 0.5rem;
+    background-size: cover;
 }
-.icon {
-    background-color: white;
-    border-radius: 100%;
-    padding: 0.75rem;
-}
-.fw {
-    color: #6200EA;
-}
-.text {
-    font-weight: 700;
-}
-
 .small_container {
     background-color: #ffffff;
-    width: 30vw;
+    width: 68%;
     height: fit-content;
     border-radius: 5%;
+    margin: 1rem 0;
 }
 .form_header {
     color: #211138;
-    font-size: 2.5rem;
+    font-size: 1.65rem;
     font-weight: 700;
-    padding: 3.5rem 3rem 1rem 3rem;
+    padding: 1.5rem 1rem;
 }
+
 .form-group {
     text-align: center;
 }
@@ -87,19 +88,22 @@ input {
     border: none;
     padding: 3%;
     margin: 0.5rem 2rem;
-    width: 25vw;
-    resize:none;
+    width: 40vw;
+    resize: none;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     color: #211138;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    opacity: 0.25;  
+    opacity: 0.25;
 }
-::-moz-placeholder { /* Firefox 19+ */
+
+::-moz-placeholder {
+    /* Firefox 19+ */
     color: #211138;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     opacity: 0.25;
 }
@@ -109,13 +113,15 @@ input {
     text-align: right;
     letter-spacing: 2.4px;
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: 0.55rem;
     margin: 0.5rem 2rem 2rem 0.5rem;
 }
+
 .forget_password a {
     text-decoration: none;
     color: #6200EA;
 }
+
 .form-group_btn {
     text-align: center;
 }
@@ -128,27 +134,48 @@ input {
     letter-spacing: 2.4px;
     border-radius: 1.5rem;
     border: 2px solid #6200EA;
-}
-.btn_signup{
-    background-color: #6200EA;
-    padding: 0.75rem 8rem;
-    margin: 0.5rem 1rem;
-}
-.btn_login{
-    background-color: #ffffff;
-    color: #6200EA;
-    padding: 0.75rem 8.5rem;
-    margin: 0.5rem 1rem;
-    margin-bottom: 3rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
-/* //// FOOTER \\\\ */
+.btn_signup {
+    background-color: #6200EA;
+    padding: 0.75rem 2rem;
+    margin: 0.5rem 1rem;
+}
+.btn_signup:hover {
+    background: #a78bcf;
+    background-image: -webkit-linear-gradient(top, #a78bcf, #3f1978);
+    background-image: -moz-linear-gradient(top, #a78bcf, #3f1978);
+    background-image: -ms-linear-gradient(top, #a78bcf, #3f1978);
+    background-image: -o-linear-gradient(top, #a78bcf, #3f1978);
+    background-image: linear-gradient(to bottom, #a78bcf, #3f1978);
+}
+
+.btn_login {
+    background-color: #ffffff;
+    color: #6200EA;
+    padding: 0.75rem 2.3rem;
+    margin: 0.5rem 1rem;
+    margin-bottom: 1rem;
+} 
+.btn_login:hover {
+    background: #6132ad;
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(top, #6132ad, #332942);
+    background-image: -moz-linear-gradient(top, #6132ad, #332942);
+    background-image: -ms-linear-gradient(top, #6132ad, #332942);
+    background-image: -o-linear-gradient(top, #6132ad, #332942);
+    background-image: linear-gradient(to bottom, #6132ad, #332942);
+}
+
+    /* //// FOOTER \\\\ */
 footer {
     background-color: #211138;
     color: #B2ACBA;
     height: 10vh;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -156,8 +183,87 @@ footer {
 
 footer div {
     margin: 0 auto;
-    text-align: center;   
- }
- .text_colored {
+    text-align: center;
+}
+
+.text_colored {
     color: #6200EA;
+}
+
+ @media (min-width: 768px){
+         /* //// HEADER \\\\ */
+    .logo {
+        position: absolute;
+        padding-left: 5%;
+        padding-top: 1%;
+    }
+
+    .logo img {
+        width: 200px;
+    } 
+
+    /* //// FŐ TARTALOM \\\\ */
+    .container {
+        display: flex;
+        height: 90vh;
+    }
+
+    .left_side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #6200EA;
+    }
+    .text,
+    .icon {
+        display: inline-block;
+    }
+
+    .icon_text::after {
+        display: none;
+    }
+
+    .small_container {
+        width: 30vw;
+        margin: 1rem 1rem;
+    }
+
+    .form_header {
+        font-size: 2.5rem;
+        padding: 3.5rem 3rem 1rem 3rem;
+    }
+
+    input {
+        width: 25vw;
+    }
+
+    ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-size: 0.875rem;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        font-size: 0.875rem;
+    }
+
+    .forget_password {
+        font-size: 0.75rem;
+    }
+
+    .btn_signup {
+        width: 80%;
+    }
+
+    .btn_login {
+        width: 80%;
+        margin-bottom: 2rem;
+    } 
+
+    br {
+        display: none;
+    }
  }
