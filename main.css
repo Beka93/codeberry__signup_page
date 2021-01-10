@@ -1,4 +1,3 @@
-﻿/* //// ÁLTALÁNOS FORMÁZÁS \\\\ */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +17,7 @@ header {
     padding-top: 1%;
 }
 
-    /* //// FŐ TARTALOM \\\\ */
+    /* //// MAIN CONTENT \\\\ */
 .left_side {
     background: #6200EA;
     text-align: center;
@@ -27,9 +26,10 @@ header {
 .text,
 .icon {
     color: white;
-    font-size: 1.875rem;
-    padding: 2rem 0.5rem;
+    font-size: 1.75rem; 
+    padding: 1.25rem 0.5rem; 
 }
+
 .icon {
     display: inline-block;
     background-color: white;
@@ -40,6 +40,7 @@ header {
 .fw {
     color: #6200EA;
 }
+
 .text {
     font-weight: 700;
 }
@@ -66,16 +67,19 @@ header {
 }
 .small_container {
     background-color: #ffffff;
-    width: 68%;
+    width: 70%;
     height: fit-content;
     border-radius: 5%;
     margin: 1rem 0;
+    padding: 1.75rem 0;
 }
+
 .form_header {
     color: #211138;
-    font-size: 1.65rem;
+    font-size: 1.85rem;
     font-weight: 700;
-    padding: 1.5rem 1rem;
+    padding: 1.75rem 1rem;
+    text-align: center;
 }
 
 .form-group {
@@ -86,16 +90,16 @@ input {
     background-color: #F4F3F5;
     opacity: 1;
     border: none;
-    padding: 3%;
+    padding: 4%;
     margin: 0.5rem 2rem;
-    width: 40vw;
+    width: 45vw;
     resize: none;
 }
 
 ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: #211138;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     opacity: 0.25;
 }
@@ -103,7 +107,7 @@ input {
 ::-moz-placeholder {
     /* Firefox 19+ */
     color: #211138;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     opacity: 0.25;
 }
@@ -113,7 +117,7 @@ input {
     text-align: right;
     letter-spacing: 2.4px;
     font-weight: 700;
-    font-size: 0.55rem;
+    font-size: 0.85rem;
     margin: 0.5rem 2rem 2rem 0.5rem;
 }
 
@@ -130,7 +134,7 @@ input {
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     letter-spacing: 2.4px;
     border-radius: 1.5rem;
     border: 2px solid #6200EA;
@@ -141,39 +145,26 @@ input {
 .btn_signup {
     background-color: #6200EA;
     padding: 0.75rem 2rem;
+    width: 60%;
     margin: 0.5rem 1rem;
 }
-.btn_signup:hover {
-    background: #a78bcf;
-    background-image: -webkit-linear-gradient(top, #a78bcf, #3f1978);
-    background-image: -moz-linear-gradient(top, #a78bcf, #3f1978);
-    background-image: -ms-linear-gradient(top, #a78bcf, #3f1978);
-    background-image: -o-linear-gradient(top, #a78bcf, #3f1978);
-    background-image: linear-gradient(to bottom, #a78bcf, #3f1978);
-}
+
 
 .btn_login {
     background-color: #ffffff;
     color: #6200EA;
     padding: 0.75rem 2.3rem;
+    width: 60%;
     margin: 0.5rem 1rem;
     margin-bottom: 1rem;
 } 
-.btn_login:hover {
-    background: #6132ad;
-    color: #ffffff;
-    background-image: -webkit-linear-gradient(top, #6132ad, #332942);
-    background-image: -moz-linear-gradient(top, #6132ad, #332942);
-    background-image: -ms-linear-gradient(top, #6132ad, #332942);
-    background-image: -o-linear-gradient(top, #6132ad, #332942);
-    background-image: linear-gradient(to bottom, #6132ad, #332942);
-}
+
 
     /* //// FOOTER \\\\ */
 footer {
     background-color: #211138;
     color: #B2ACBA;
-    height: 10vh;
+    height: 14vh;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -184,13 +175,14 @@ footer {
 footer div {
     margin: 0 auto;
     text-align: center;
+    padding: 1rem;
 }
 
 .text_colored {
     color: #6200EA;
 }
 
- @media (min-width: 768px){
+ @media (min-width: 992px){
          /* //// HEADER \\\\ */
     .logo {
         position: absolute;
@@ -202,7 +194,7 @@ footer div {
         width: 200px;
     } 
 
-    /* //// FŐ TARTALOM \\\\ */
+    /* //// MAIN CONTENT \\\\ */
     .container {
         display: flex;
         height: 90vh;
@@ -220,7 +212,15 @@ footer div {
     .text,
     .icon {
         display: inline-block;
+        color: white;
+        font-size: 1.875rem; 
+        padding: 2rem 0.5rem; 
     }
+
+    .icon {
+        border-radius: 100%;
+        padding: 0.75rem;
+    } 
 
     .icon_text::after {
         display: none;
@@ -229,11 +229,12 @@ footer div {
     .small_container {
         width: 30vw;
         margin: 1rem 1rem;
+        padding: 0;
     }
 
     .form_header {
-        font-size: 2.5rem;
-        padding: 3.5rem 3rem 1rem 3rem;
+        font-size: 2rem;
+        padding: 3rem 3rem 1rem 3rem;
     }
 
     input {
@@ -257,13 +258,32 @@ footer div {
     .btn_signup {
         width: 80%;
     }
+     .btn_signup:hover {
+        background: #a78bcf;
+        background-image: -webkit-linear-gradient(top, #a78bcf, #3f1978);
+        background-image: -moz-linear-gradient(top, #a78bcf, #3f1978);
+        background-image: -ms-linear-gradient(top, #a78bcf, #3f1978);
+        background-image: -o-linear-gradient(top, #a78bcf, #3f1978);
+        background-image: linear-gradient(to bottom, #a78bcf, #3f1978);
+     }
 
     .btn_login {
         width: 80%;
         margin-bottom: 2rem;
     } 
-
+     .btn_login:hover {
+        background: #6132ad;
+        color: #ffffff;
+        background-image: -webkit-linear-gradient(top, #6132ad, #332942);
+        background-image: -moz-linear-gradient(top, #6132ad, #332942);
+        background-image: -ms-linear-gradient(top, #6132ad, #332942);
+        background-image: -o-linear-gradient(top, #6132ad, #332942);
+        background-image: linear-gradient(to bottom, #6132ad, #332942);
+     }
     br {
         display: none;
+    }
+    footer {
+      height: 12vh;
     }
  }
